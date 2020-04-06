@@ -158,7 +158,7 @@
                                 <a target="_blank" class="dropdown-item" href="https://www.simiinmobiliarias.com/base/simired/simidocsapi1.0/index.php?inmo=180&tipo=2"> Arrendatarios </a>
                                 <a target="_blank" class="dropdown-item" href="https://www.simiinmobiliarias.com/base/simired/simidocsapi1.0/index.php?inmo=180&tipo=1"> Propietarios </a>
                                 <a target="_blank" class="dropdown-item" href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments"> Pagos en línea </a>
-                                <a target="_blank" data-toggle="modal" data-target="#descargar_formularios" class="dropdown-item"> Descarga de Formularios </a>
+                                
                             </div>
                         </li>
 

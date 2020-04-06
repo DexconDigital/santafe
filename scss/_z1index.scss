@@ -801,3 +801,15 @@ footer {
         font-size: 16px;
     }
 }
+
+
+
+.navbar-toggler {
+    &:focus {
+
+        border-color: inherit!important;
+        box-shadow: $azul!important;
+        color: $azul;
+        outline: inherit;
+    }
+}
