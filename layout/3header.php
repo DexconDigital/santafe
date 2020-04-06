@@ -1,5 +1,5 @@
 <!-- Codigo del preloader -->
- <!-- <style>
+ <style>
     #wrap-preload {
         position: fixed;
         z-index: 10;
@@ -44,7 +44,7 @@
     window.addEventListener("load", function() {
         loader.style.visibility = "hidden";
     });
-</script>  -->
+</script>
 <!-- Fin de codigo preloader -->
 
 
@@ -152,12 +152,12 @@
 
                         <li class="nav-item m-auto dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Transacciones en Línea
+                                Clientes
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a target="_blank" class="dropdown-item" href="https://www.simiinmobiliarias.com/base/simired/simidocsapi1.0/index.php?inmo=180&tipo=2"> Arrendatarios </a>
                                 <a target="_blank" class="dropdown-item" href="https://www.simiinmobiliarias.com/base/simired/simidocsapi1.0/index.php?inmo=180&tipo=1"> Propietarios </a>
-                                <!-- <a target="_blank" class="dropdown-item" href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments"> Pagos en línea </a> -->
+                                <a target="_blank" class="dropdown-item" href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments"> Pagos en línea </a>
                                 <a target="_blank" data-toggle="modal" data-target="#descargar_formularios" class="dropdown-item"> Descarga de Formularios </a>
                             </div>
                         </li>
@@ -175,8 +175,12 @@
                         </li>
 
                         <li class="nav-item m-auto">
-                            <a target="_blank" href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments" class="nav-link"> <img class="botonpse" src="images/mpa.png" alt=""> </a>
+                            <a style="cursor: pointer" data-toggle="modal" data-target="#descargar_formularios" class="nav-link"> Descarga de Formularios </a>
                         </li>
+
+                        <!-- <li class="nav-item m-auto">
+                            <a target="_blank" href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments" class="nav-link"> <img class="botonpse" src="images/mpa.png" alt=""> </a>
+                        </li> -->
 
                     </ul>
                 </div>

@@ -114,6 +114,8 @@ $page = "Inicio" ?>
             </div>
             <!-- CARDS -->
 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illum in quisquam earum voluptas ut alias, molestias ad sequi modi.
+
         </div>
     </section>
     <!-- PROPIEDADES DESTACADAS -->

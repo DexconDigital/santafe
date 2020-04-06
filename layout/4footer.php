@@ -5,14 +5,9 @@
     <section class="contenido d-flex align-items-start flex-wrap justify-content-center blanco">
 
         <!-- DATOS DE CONTACTO -->
-        <div class="order-1 order-md-1 order-lg-1 order-xl-1 col-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="order-1 order-md-1 order-lg-1 order-xl-1 col-12 col-md-6 col-lg-4 col-xl-4">
 
             <h4 class="text-center my-3"> Datos de Contacto </h4>
-
-            <div class="d-flex align-items-baseline">
-                <i class="mr-2 <?php echo $datos_contacto['direccion']['icono'] ?>"></i>
-                <p><?php echo $datos_contacto['direccion']['direccion'] ?></p>
-            </div>
 
             <div>
                 <a class="blanco align-items-center d-flex" href="tel:<?php echo $datos_contacto['telefono_fijo']['link'] ?>">
@@ -38,8 +33,29 @@
             <div>
                 <a class="blanco align-items-center d-flex" href="mailto:<?php echo $datos_contacto['correo']['correo'] ?>">
                     <i class="mr-2 <?php echo $datos_contacto['correo']['icono'] ?>"></i>
-                    <p class="correo_movil"><?php echo $datos_contacto['correo']['correo'] ?></p>
+                    <p class="text-break correo_movil"><?php echo $datos_contacto['correo']['correo'] ?></p>
                 </a>
+            </div>
+
+
+
+        </div>
+        <!-- DATOS DE CONTACTO -->
+
+        <!-- MAPA -->
+        <div class="order-3 order-md-2 order-lg-2 order-xl-2 col-12 col-md-12 col-lg-4 col-xl-4 mt-5 mapa d-flex align-items-center flex-column justify-content-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.7915251547765!2d-74.08139118590994!3d4.63124864354704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bd4908aa381%3A0x8be02f4be67034a2!2sCra.%2029%20%2340a-57%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1579530430343!5m2!1ses-419!2sco" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <a target="blank" href="https://www.google.com/maps/dir//Cra.+29+%2340a-57,+Bogot%C3%A1/@4.6312486,-74.0813912,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e3f9bd4908aa381:0x8be02f4be67034a2!2m2!1d-74.0792025!2d4.6312433?hl=es-CL"><button class="btn boton_footer mt-3"> Cómo Llegar </button></a>
+        </div>
+        <!-- MAPA -->
+
+        <div class="order-1 order-md-1 order-lg-3 order-xl-3 col-12 col-md-6 col-lg-4 col-xl-4">
+
+            <h4 class="text-center my-3"> Ubicación y Horario </h4>
+
+            <div class="d-flex align-items-baseline">
+                <i class="mr-2 <?php echo $datos_contacto['direccion']['icono'] ?>"></i>
+                <p><?php echo $datos_contacto['direccion']['direccion'] ?></p>
             </div>
 
             <div class="d-flex align-items-baseline">
@@ -48,25 +64,8 @@
             </div>
 
         </div>
-        <!-- DATOS DE CONTACTO -->
-
-        <!-- MAPA -->
-        <div class="order-3 order-md-2 order-lg-2 order-xl-2 col-12 col-md-5 col-lg-5 col-xl-5 mt-5 mapa d-flex align-items-center flex-column justify-content-center">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.7915251547765!2d-74.08139118590994!3d4.63124864354704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bd4908aa381%3A0x8be02f4be67034a2!2sCra.%2029%20%2340a-57%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1579530430343!5m2!1ses-419!2sco" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            <a target="blank" href="https://www.google.com/maps/dir//Cra.+29+%2340a-57,+Bogot%C3%A1/@4.6312486,-74.0813912,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e3f9bd4908aa381:0x8be02f4be67034a2!2m2!1d-74.0792025!2d4.6312433?hl=es-CL"><button class="btn boton_footer mt-3"> Cómo Llegar </button></a>
-        </div>
-        <!-- MAPA -->
-
-        <!-- DESCARGA DE FORMULARIOS -->
-        <div class="order-2 order-md-3 order-lg-3 order-xl-3 col-12 col-md-3 col-lg-3 col-xl-3 d-flex align-items-center justify-content-center flex-column">
-
-            <h4 class="text-center my-3"> Descargar Formularios </h4>
-
-            <button data-toggle="modal" data-target="#descargar_formularios" class="btn boton_footer"> Descargar aquí </button>
 
 
-        </div>
-        <!-- DESCARGA DE FORMULARIOS -->
 
     </section>
 
@@ -104,7 +103,7 @@
 
 
                 <a target="_blank" class="col-8 d-flex aling-items-center justify-content-center formularios_footer2" href="http://www.ellibertador.co/wps/portal/el-libertador/home">
-                    <img class="w-100 h-100"  src="images/libertador.png" alt="">
+                    <img class="w-100 h-100" src="images/libertador.png" alt="">
                 </a>
 
             </div>
