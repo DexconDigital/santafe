@@ -114,8 +114,6 @@ $page = "Inicio" ?>
             </div>
             <!-- CARDS -->
 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illum in quisquam earum voluptas ut alias, molestias ad sequi modi.
-
         </div>
     </section>
     <!-- PROPIEDADES DESTACADAS -->
@@ -283,6 +281,7 @@ $page = "Inicio" ?>
             <ol class="carousel-indicators">
                 <li data-target="#ejemplo" data-slide-to="0" class="active"></li>
                 <li data-target="#ejemplo" data-slide-to="1"></li>
+                <li data-target="#ejemplo" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
 
@@ -305,6 +304,16 @@ $page = "Inicio" ?>
                         <div class="col-3"> <img class="d-block w-100 protecsa" src="images/protecsa.png" alt=""></div>
                         <div class="col-3"> <img class="h-100 d-block w-100" src="images/seguros_estado.png" alt=""></div>
                         <div class="col-3"> <img class="h-100 d-block w-100" src="images/simi.png" alt=""></div>
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <div class="d-flex flex_tablet align-items-center justify-content-center">
+                        <div class="col-3"> <img class="h-100 d-block w-100" src="images/finca_raiz.png" alt=""></div>
+                        <div class="col-3"> <img class="d-block w-100 protecsa" src="images/metrocuadrado.png" alt=""></div>
+                   
                     </div>
 
                 </div>
@@ -370,6 +379,14 @@ $page = "Inicio" ?>
 
                 <div style="height:200px" class="align-items-center mx-2 contenedor_imagenes d-flex justify-content-center">
                     <img src="images/simi.png" alt="">
+                </div>
+
+                <div style="height:200px" class="align-items-center mx-2 contenedor_imagenes d-flex justify-content-center">
+                    <img src="images/finca_raiz.png" alt="">
+                </div>
+
+                <div style="height:200px" class="align-items-center mx-2 contenedor_imagenes d-flex justify-content-center">
+                    <img src="images/metrocuadrado.png" alt="">
                 </div>
 
             </div>
