@@ -761,6 +761,14 @@ footer {
 }
 
 @media (max-width:768px) {
+
+    #aliados {
+        ol {
+            position: absolute;
+            bottom: -80%;
+        }
+    }
+
     .margen_top {
         margin-top: 192px;
     }

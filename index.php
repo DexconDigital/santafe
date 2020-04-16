@@ -312,7 +312,7 @@ $page = "Inicio" ?>
 
                     <div class="d-flex flex_tablet align-items-center justify-content-center">
                         <div class="col-3"> <img class="h-100 d-block w-100" src="images/finca_raiz.png" alt=""></div>
-                        <div class="col-3"> <img class="d-block w-100 protecsa" src="images/metrocuadrado.png" alt=""></div>
+                        <div class="col-3"> <img class="d-block w-100" src="images/metrocuadrado.png" alt=""></div>
                    
                     </div>
 
