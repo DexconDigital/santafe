@@ -313,6 +313,7 @@ $page = "Inicio" ?>
                     <div class="d-flex flex_tablet align-items-center justify-content-center">
                         <div class="col-3"> <img class="h-100 d-block w-100" src="images/finca_raiz.png" alt=""></div>
                         <div class="col-3"> <img class="d-block w-100" src="images/metrocuadrado.png" alt=""></div>
+                        <div class="col-3"> <img class="d-block w-100" src="images/ciencuadras.png" alt=""></div>
 
                     </div>
 
@@ -348,13 +349,10 @@ $page = "Inicio" ?>
                 </div>
 
 
-                <!-- <div style="height:200px" class="align-items-center mx-2 contenedor_imagenes d-flex justify-content-center">
-                    <img src="images/a.png" alt="">
-                </div> -->
-
                 <div style="height:200px" class="align-items-center mx-2 contenedor_imagenes d-flex justify-content-center">
                     <img src="images/caja_social.png" alt="">
                 </div>
+                
                 
                 <div style="height:200px" class="align-items-center mx-2 contenedor_imagenes d-flex justify-content-center">
                     <img src="images/afiansa.png" alt="">
@@ -391,6 +389,11 @@ $page = "Inicio" ?>
                 <div style="height:200px" class="align-items-center mx-2 contenedor_imagenes d-flex justify-content-center">
                     <img src="images/metrocuadrado.png" alt="">
                 </div>
+
+                <div style="height:200px" class="align-items-center mx-2 contenedor_imagenes d-flex justify-content-center">
+                    <img src="images/ciencuadras.png" alt="">
+                </div>
+                
 
             </div>
 
