@@ -36,6 +36,11 @@ $ciudad = $r['ciudad'];
 $descripcion = $r['descripcionlarga'];
 $garaje = $r['garaje'];
 $asesor = $r['asesor'][0];
+$foto360 = $r['video360'];
+
+
+
+
 
 if($asesor['FotoAsesor'] == 'https://simicrm.app/mcomercialweb/'){
     $asesor['FotoAsesor'] = 'images/no_image.png';
