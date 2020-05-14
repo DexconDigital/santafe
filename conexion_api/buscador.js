@@ -135,16 +135,29 @@ $(document).ready(function () {
             },
             'dataType': "json",
             success: function (operacion) {
-                var operacion_resultados = " ";
-                for (var i = 0; i < operacion.length; i++) {
+                //   El resultado lo guardo en una variable Result 
+                var result = operacion;
+                // Utilizo sort para ordenarlos
+                result.sort(function (a, b) {
+                    if (a.Nombre > b.Nombre) {
+                      return 1;
+                    }
+                    if (a.Nombre < b.Nombre) { 
+                      return -1;
+                    }
+                    return 0;
+                  });
+                
+               var operacion_resultados = " ";
+                for (var i = 0; i < result.length; i++) {
                     operacion_resultados +=
-                        '<option value="' + operacion[i].idTipoInm + '">' +
-                        operacion[i].Nombre +
+                        '<option value="' + result[i].idTipoInm + '">' +
+                        result[i].Nombre +
                         '</option>';
                 }
                 $('#tipo_inmueble_buscar').append(operacion_resultados);
             }
-
+    
         });
 
         // Buscar por medio del boton creado en el buscador

@@ -7,10 +7,11 @@ require '../vendor/autoload.php';
 
 if ($_POST) {
     $nombre = $_POST['name'];
-    $telefono = $_POST['telefono'];
     $email = $_POST['email'];
-    $mensaje = $_POST['message'];
     $asunto = $_POST['asunto'];
+    $telefono = $_POST['telefono']; 
+    $mensaje = $_POST['message'];
+    
 
 }
 $mail = new PHPMailer(true);
@@ -34,10 +35,12 @@ try{
     //Cabecera
     $mail->setFrom('SantaFeDc@arrendamientossantafe.com', 'SantaFeDc@arrendamientossantafe.com');
     //destinos
-    $mail->addAddress('contacto@inmobiliariasantafedc.com');
+    // $mail->addAddress('contacto@inmobiliariasantafedc.com');
+    // $mail->addAddress('wdsp9898@gmail.com');
+    // $mail->addAddress('desarrollo2@dexcondigital.com');
     
     
-    $mail->Subject='Mensaje desde la pagina web SantaFe DC';
+    $mail->Subject='Mensaje desde la página web SantaFe DC';
     $mail->Body = '<span>Hola, '.$nombre.' quiere contactarse con ustedes, Asunto: '.$asunto.'.</span>
                     <h4>Datos de contacto:</h4>
                     <ul>

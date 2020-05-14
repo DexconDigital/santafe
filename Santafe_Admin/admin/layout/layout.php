@@ -4,7 +4,7 @@ $con = Conect();
 $qry = "SELECT * FROM usuarios where usuario ='$user'";
 $sql = mysqli_query($con, $qry);
 $usuario =  mysqli_fetch_array($sql);
-$imagen_inicio = $usuario[7];
+// $imagen_inicio = $usuario[7];
 $page = "Inicio SantaFe DC";
 ?>
 <!DOCTYPE html>
@@ -45,7 +45,7 @@ $page = "Inicio SantaFe DC";
         }
 
         .fondo_imagen {
-            background-image: url("../../images/banner_blog.png");
+            background-image: url("../../images/background_admin_noticias.png");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;

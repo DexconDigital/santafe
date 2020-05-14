@@ -97,18 +97,27 @@ $page = "Quiénes Somos" ?>
                 <h2 style="font-size:23px" class="linea position-relative"> Conoce Nuestros Asesores </h2>
             </div>
 
-            <div class=" d-flex justify-content-center">
 
+
+            <div class="col-12 d-flex justify-content-center flex-wrap">
                 <?php if (isset($asesor_array)) {
                     modelo_asesor($asesor_array);
                 } else {
-                    echo '<div class="col 12">
+                    echo '<div class="col-12 d-flex justify-content-center">
                         <h3 class="text-center">No hay asesores para mostrar<h3>
                         </div>';
                 }
                 ?>
-
             </div>
+
+
+
+        </div>
+
+
+
+
+
 
         </div>
 
