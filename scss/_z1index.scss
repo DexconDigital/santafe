@@ -69,13 +69,6 @@ p {
 
 .boton {
 
-    color: white;
-    background-color: $azul;
-
-    &:hover {
-        background-color: $rojo;
-        color: white;
-    }
 }
 
 .boton_cerrar {
@@ -725,7 +718,8 @@ footer {
 }
 
 .color_blanco_url{
-    color: white !important;
+    color: black !important;
+    border: 1px solid $azul_oscuro !important;
 } 
 
 .fondo_azul {

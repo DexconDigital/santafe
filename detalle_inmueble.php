@@ -301,14 +301,14 @@ $page = "Detalle de Inmueble" ?>
 
                 <!-- BOTON IMPRIMIR FICHA -->
                 <div class="col-12 mt-5">
-                    <a type="button" class="col-12 btn boton color_blanco_url" href="https://simicrm.app/mcomercialweb/fichas_tecnicas/fichatec3.php?reg=180-<?php echo $co ?>" target="_blank">Imprimir ficha del Inmueble</a>
+                    <a type="button" class="col-12 btn boton color_blanco_url border" href="https://simicrm.app/mcomercialweb/fichas_tecnicas/fichatec3.php?reg=180-<?php echo $co ?>" target="_blank">Imprimir ficha del Inmueble</a>
                 </div>
                 <!-- BOTON IMPRIMIR FICHA -->
 
                 <!-- BOTON FOTO360 -->
                 <?php if ($foto360 != "") {
                     echo '<div id="foto360" class="col-12 mt-2">
-                         <a type="button" class="col-12 btn boton color_blanco_url" href="' . $foto360 . '" target="_blank"> Ver Foto 360 </a>
+                         <a type="button" class="col-12 btn boton color_blanco_url border" href="' . $foto360 . '" target="_blank"> Ver Foto 360 </a>
                            </div>';
                 } else {
                     echo ' ';
