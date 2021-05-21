@@ -1,55 +1,61 @@
 <?php
 
-require_once("conexion.php");
+require_once( "conexion.php" );
 
-$link = Conect();
+$con = Conect();
 $array = array();
 
 $sql = "SELECT * FROM noticias  where id_inmobiliaria2 = 14 order by id desc";
-$result = mysqli_query($link, $sql) or die(mysqli_error($link));
-while ($field = mysqli_fetch_array($result)) {
-    $nombre = $field['nombre'];
-    $id = $field['id'];
-    $descripcion = $field['descripcion'];
-    $imagen = $field['imagen'];
-    $noticia = $field['noticia'];
-    $fecha = $field['fecha'];
-    $archivo = $field['archivo'];
+$result = $con->prepare( $sql );
+$result->execute();
+
+$resultado = $result->fetchAll( PDO::FETCH_OBJ );
+
+foreach ( $resultado as $key => $field ) {
+    $id = $field->id;
+    $nombre = $field->nombre;
+    $descripcion = $field->descripcion;
+    $imagen = $field->imagen;
+    $archivo = $field->archivo;
+    $noticia = $field->noticia;
+    $fecha = $field->fecha;
     $noticias_array[] = array(
         'titulo' => $nombre,
         'id' => $id,
         'descripcion' => $descripcion,
-        'imagen' => 'Santafe_Admin/admin/'.$imagen,
+        'imagen' => 'Santafe_Admin/admin/' . $imagen,
         'noticia' => $noticia,
         'fecha' => $fecha,
-        'archivo' => $archivo
+        'archivo' => $archivo,
     );
 }
-function modelo_ultima_noticia($r)
-{      
-    if(count($r) > 2){
+
+function modelo_ultima_noticia( $r ) {
+
+    if ( count( $r ) > 2 ) {
         $cantidad_noticias = 3;
-    }else{
-        $cantidad_noticias = count($r);
+    } else {
+        $cantidad_noticias = count( $r );
     }
-    for($i=0; $i<$cantidad_noticias; $i++){
+    for ( $i = 0; $i<$cantidad_noticias; $i++ ) {
         $nombre = $r[$i]['titulo'];
         $descrip = $r[$i]['descripcion'];
         $limite_de_cadena1 = 124;
         $limite_de_cadena11 = 120;
         $limite_de_cadena2 = 16;
-          // recortar cadena
-          //pedniente recortar cadena de descripcion corta
-           if (strlen($nombre) >= $limite_de_cadena2) {
-              $nombre = substr($nombre, 0, $limite_de_cadena2) . '...';
-          }else {
-              $nombre = $nombre . '...';
-          }if (strlen($descrip) >= $limite_de_cadena1) {
-              $descrip = substr($descrip, 0, $limite_de_cadena1) . '...';
-          }else {
-              $descrip = $descrip . '...';
-          }
-       echo'
+        // recortar cadena
+        //pedniente recortar cadena de descripcion corta
+        if ( strlen( $nombre ) >= $limite_de_cadena2 ) {
+            $nombre = substr( $nombre, 0, $limite_de_cadena2 ) . '...';
+        } else {
+            $nombre = $nombre . '...';
+        }
+        if ( strlen( $descrip ) >= $limite_de_cadena1 ) {
+            $descrip = substr( $descrip, 0, $limite_de_cadena1 ) . '...';
+        } else {
+            $descrip = $descrip . '...';
+        }
+        echo'
        <div class="col-12 col-md-6 col-lg-4 col-xl-4 mt-5">
        <a href="./detalle-noticia.php?co=' . $r[$i]['id'] . '">
            <div class="card">
@@ -77,26 +83,26 @@ function modelo_ultima_noticia($r)
     }
 }
 
-
-function modelo_noticia($r)
-{
-    for ($i = 0; $i < count($r); $i++) {
+function modelo_noticia( $r ) {
+    for ( $i = 0; $i < count( $r );
+    $i++ ) {
         $nombre = $r[$i]['titulo'];
         $descrip = $r[$i]['descripcion'];
         $limite_de_cadena1 = 124;
         $limite_de_cadena11 = 120;
         $limite_de_cadena2 = 16;
-          // recortar cadena
-          //pedniente recortar cadena de descripcion corta
-           if (strlen($nombre) >= $limite_de_cadena2) {
-              $nombre = substr($nombre, 0, $limite_de_cadena2) . '...';
-          }else {
-              $nombre = $nombre . '...';
-          }if (strlen($descrip) >= $limite_de_cadena1) {
-              $descrip = substr($descrip, 0, $limite_de_cadena1) . '...';
-          }else {
-              $descrip = $descrip . '...';
-          }
+        // recortar cadena
+        //pedniente recortar cadena de descripcion corta
+        if ( strlen( $nombre ) >= $limite_de_cadena2 ) {
+            $nombre = substr( $nombre, 0, $limite_de_cadena2 ) . '...';
+        } else {
+            $nombre = $nombre . '...';
+        }
+        if ( strlen( $descrip ) >= $limite_de_cadena1 ) {
+            $descrip = substr( $descrip, 0, $limite_de_cadena1 ) . '...';
+        } else {
+            $descrip = $descrip . '...';
+        }
         echo '
         <div class="col-12 col-md-6 col-lg-4 col-xl-4 mt-5">
              <a href="./detalle-noticia.php?co=' . $r[$i]['id'] . '">
