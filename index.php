@@ -9,7 +9,7 @@ $page = "Inicio" ?>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php include 'layout/1archivos_header.php' ?>
     <?php require 'controllers/indexController.php'; ?>
-    <?php require 'controllers/noticiasController.php'; ?>
+    <?php //require 'controllers/noticiasController.php'; ?>
 
     <title> <?php echo $page . ' | ' . $nombre_inmobiliaria ?> </title>
 </head>
