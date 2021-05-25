@@ -1,25 +1,23 @@
+<?php
+require_once( "conexion.php" );
+$id = $_GET["id"];
+$con = Conect();
+$consulta = "SELECT * FROM asesores WHERE id = '$id'";
+$result = $con->prepare( $consulta );
+$result->execute();
+$resultado = $result->fetch( PDO::FETCH_OBJ );
 
-     <?php
-        require_once("conexion.php");
-        $id = $_GET["id"];
-        $con = Conect();
-        $consulta = "SELECT * FROM asesores WHERE id = '$id'";
-        $result = mysqli_query($con, $consulta) or die(mysqli_error($con));
-        while ($field = mysqli_fetch_array($result)) {
-            $imagen = $field['imagen'];
-                      
-        }
-        unlink($archivo);
-        unlink($imagen);
+var_dump($resultado);
+$imagen = $resultado->imagen;
 
-        $qry = "DELETE FROM asesores WHERE id ='$id'  ";
-        $sql = mysqli_query($con, $qry);
+unlink( $imagen );
 
-        if (!$sql) {
-            echo 'No se logro realizar la peticion';
-        } else {
-            header("Location: lista_asesores.php");
-        }
-        ?>
-    
-    
+$qry = "DELETE FROM asesores WHERE id ='$id'  ";
+$result = $con->prepare( $qry );
+$result->execute();
+if ( !$result ) {
+    echo 'No se logro realizar la peticion';
+} else {
+    header( "Location: lista_asesores.php" );
+}
+?>

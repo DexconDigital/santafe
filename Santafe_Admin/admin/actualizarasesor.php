@@ -2,11 +2,12 @@
 require("seguridad.php");
 require_once("conexion.php");
 include 'layout/layout.php';
-$id = $_GET["id"];
+$id = (isset($_GET["id"])) ? $_GET["id"] : 0;
 $con = Conect();
 $qry = "SELECT * FROM asesores where id ='$id' and id_inmobiliaria = 14";
-$sql = mysqli_query($con, $qry);
-$res =  mysqli_fetch_array($sql);
+$result = $con->prepare( $qry );
+$result->execute();
+$res = $result->fetch( PDO::FETCH_OBJ );
 ?>
 <style>
     .contenedor_color {
@@ -42,46 +43,36 @@ $res =  mysqli_fetch_array($sql);
     }
     
 </style>
+<?php
+if ( $res ) { ?>
 <div class="container contenedor_color">
     <div class="row justify-content-center">
         <div class="col-9" style=" margin-top: 27px;">
             <h2 class="text-center mb-3">Actualizar asesor</h2>
             <form method="post" action="update_asesor.php" enctype="multipart/form-data">
-                <input type="hidden" name="id" id="id" value="<?php echo $res[0]; ?>">
+                <input type="hidden" name="id" id="id" value="<?php echo $res->id; ?>">
                 <div class="form-group row">
                     <label for="" class="col-sm-3 col-form-label">Nombre y Apellido</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="nom_asesor" id="nom_asesor" value="<?php echo $res[1]; ?>">
+                        <input type="text" class="form-control" name="nom_asesor" id="nom_asesor" value="<?php echo $res->nombre; ?>">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputPassword" class="col-sm-3 col-form-label">Celular</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="cel_asesor" id="cel_asesor" value="<?php echo $res[2]; ?>">
+                        <input type="text" class="form-control" name="cel_asesor" id="cel_asesor" value="<?php echo $res->telefono; ?>">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputPassword" class="col-sm-3 col-form-label">Correo</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="cor_asesor" id="cor_asesor" value="<?php echo $res[3]; ?>">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-3 col-form-label">Cargo Actual:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" name="cargo" id="cargo" value="<?php echo $res[7]; ?>">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Descripción:</label>
-                    <div class="col-sm-9" style="margin-left: 8%;">
-                        <textarea name="descrip" id="descrip"><?php echo $res[8];?></textarea>
+                        <input type="text" class="form-control" name="cor_asesor" id="cor_asesor" value="<?php echo $res->correo; ?>">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="" class="col-sm-3 col-form-label">Imagen Actual</label>
                     <div class="col-sm-9">
-                        <img src="<?php echo $res[4]; ?>" alt="" width="200px" height="auto">
+                        <img src="<?php echo $res->imagen; ?>" alt="" width="200px" height="auto">
                     </div>
                     <div class="col-sm-8">
                         <input type="file" class="form-control-file boton_imagen" name="imagen" id="imagen" accept="image/*">
@@ -90,7 +81,7 @@ $res =  mysqli_fetch_array($sql);
                 <input type="hidden" id="fecha" name="fecha">
                 <div class="form-group row">
                     <div class="col-8 offset-2 conct_botton mt-4">
-                        <button class="btn color_botton">Actualizar Asesor</button>
+                        <button class="btn btn-danger">Actualizar Asesor</button>
                     </div>
                 </div>
             </form>
@@ -98,4 +89,8 @@ $res =  mysqli_fetch_array($sql);
     </div>
 </div>
 
-<?php include 'layout/layoutFooter.php'; ?>
+<?php 
+} else {
+    echo "<h1> No se encontró ningún registro</h1>";
+}
+include 'layout/layoutFooter.php';?>
