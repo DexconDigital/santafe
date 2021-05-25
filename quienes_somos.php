@@ -1,5 +1,5 @@
 <?php require 'variables/variables.php';
-//require 'controllers/asesor_detalle.php';
+require 'controllers/asesor_detalle.php';
 $page = "Quiénes Somos" ?>
 <!DOCTYPE html>
 <html lang="es">
