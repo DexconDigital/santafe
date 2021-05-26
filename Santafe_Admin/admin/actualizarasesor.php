@@ -70,6 +70,12 @@ if ( $res ) { ?>
                     </div>
                 </div>
                 <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-3 col-form-label">Cargo:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="cargo" id="cargo" value="<?php echo $res->cargo; ?>">
+                    </div>
+                </div>
+                <div class="form-group row">
                     <label for="" class="col-sm-3 col-form-label">Imagen Actual</label>
                     <div class="col-sm-9">
                         <img src="<?php echo $res->imagen; ?>" alt="" width="200px" height="auto">
