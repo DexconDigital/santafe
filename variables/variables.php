@@ -48,8 +48,8 @@ $datos_contacto = [
 		"icono" => "fas fa-map-marker-alt",
 	],
 	"telefono_fijo" => [
-		"link"=> "0316306011",
-		"imprimir" => "PBX +57(1) 630 6011",
+		"link"=> "6016306011",
+		"imprimir" => "PBX (601) 630 6011",
 		"icono" => "fas fa-phone-alt",
 	],
 	"celular" => [
